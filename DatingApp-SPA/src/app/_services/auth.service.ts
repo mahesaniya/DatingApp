@@ -24,9 +24,12 @@ constructor(private http: HttpClient) { }
   }
 
   login(model: any) {
+    console.log('trying to login');
+    console.log('model : ' + JSON.stringify(model));
     return this.http.post(this.baseUrl + 'login', model).pipe(
       map((response: any) => {
         const user = response;
+        console.log(user);
         if (user) {
           localStorage.setItem('token', user.token);
           localStorage.setItem('user', JSON.stringify(user.user));
@@ -38,8 +41,9 @@ constructor(private http: HttpClient) { }
     );
   }
 
-  register(model: any) {
-    return this.http.post(this.baseUrl + 'register', model);
+  register(user: User) {
+    console.log('Trying to register');
+    return this.http.post(this.baseUrl + 'register', user);
   }
 
   loggedIn() {
