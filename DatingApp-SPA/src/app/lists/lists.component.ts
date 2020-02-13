@@ -4,8 +4,7 @@ import { UserService } from './../_services/user.service';
 import { AuthService } from './../_services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../_models/user';
-import { Pagination } from '../_models/Pagination';
-import { PaginatedResult } from '../_models/PaginatedResult';
+import { Pagination, PaginatedResult } from '../_models/Pagination';
 
 @Component({
   selector: 'app-lists',

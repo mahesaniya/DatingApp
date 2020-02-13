@@ -1,10 +1,9 @@
-import { PaginatedResult } from 'src/app/_models/PaginatedResult';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../_services/user.service';
 import { AlertifyService } from '../../_services/alertify.service';
 import { User } from '../../_models/user';
 import { Component, OnInit } from '@angular/core';
-import { Pagination } from 'src/app/_models/Pagination';
+import { Pagination, PaginatedResult } from 'src/app/_models/Pagination';
 
 @Component({
   selector: 'app-member-list',
